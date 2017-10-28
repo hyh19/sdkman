@@ -56,4 +56,7 @@ fi
 
 curl -s "https://get.sdkman.io" | bash
 
-echo "提示：执行命令 source $HOME/.sdkman/bin/sdkman-init.sh"
+echo "################################################################################"
+echo "# 1、执行命令 source $HOME/.sdkman/bin/sdkman-init.sh 让 PATH 变量的修改生效"
+echo "# 2、执行命令 sdk version 检查安装结果"
+echo "################################################################################"
