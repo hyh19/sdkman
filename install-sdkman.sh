@@ -65,6 +65,6 @@ fi
 curl -s "https://get.sdkman.io" | bash
 
 echo "################################################################################"
-echo "# 1. Run 'source $HOME/.sdkman/bin/sdkman-init.sh' to let the modification of PATH take effects."
-echo "# 2. Run 'sdk version' to check the result."
+echo "# 1. Open a new terminal or enter 'source $HOME/.sdkman/bin/sdkman-init.sh'"
+echo "# 2. Run the command 'sdk version' to ensure that installation succeeded"
 echo "################################################################################"
