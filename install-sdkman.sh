@@ -49,14 +49,16 @@ check_sys() {
 # 安装工具软件
 if check_sys packageManager yum; then
     yum install curl zip unzip -y
+elif check_sys packageManager apt; then
+    apt install curl zip unzip -y
 else
-    echo "不支持的操作系统"
+    echo "ERROR：Not supported distro."
     exit 1
 fi
 
 curl -s "https://get.sdkman.io" | bash
 
 echo "################################################################################"
-echo "# 1、执行命令 source $HOME/.sdkman/bin/sdkman-init.sh 让 PATH 变量的修改生效"
-echo "# 2、执行命令 sdk version 检查安装结果"
+echo "# 1. Run 'source $HOME/.sdkman/bin/sdkman-init.sh' to let the modification of PATH take effects."
+echo "# 2. Run 'sdk version' to check the result."
 echo "################################################################################"
