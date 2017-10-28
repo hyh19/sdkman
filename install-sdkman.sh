@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
+#
+# System Required: CentOS, Debian, Ubuntu
+#
+# Description: Install SDKMAN
+#
+# Author: Huang Yuhui
+#
 
-# 判断 Linux 发行版本（CentOS、Ubuntu、Debian）和软件包管理方式（yum、apt）
 check_sys() {
     local checkType=$1
     local value=$2
@@ -46,11 +52,11 @@ check_sys() {
     fi
 }
 
-# 安装工具软件
 if check_sys packageManager yum; then
-    yum install curl zip unzip -y
+    sudo yum install curl zip unzip -y
 elif check_sys packageManager apt; then
-    apt install curl zip unzip -y
+    sudo apt update
+    sudo apt install curl zip unzip -y
 else
     echo "ERROR：Not supported distro."
     exit 1
