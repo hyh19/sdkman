@@ -8,25 +8,32 @@ https://github.com/sdkman/sdkman-cli
 
 ## [Installation](http://sdkman.io/install.html)
 
-***Only* requires curl and zip/unzip to be present on your system.**
+**[install-sdkman.sh](https://github.com/mrhuangyuhui/sdkman-practice/blob/master/install-sdkman.sh)**
+```bash
+curl -L https://raw.githubusercontent.com/mrhuangyuhui/sdkman/master/install-sdkman.sh | sh
 ```
+***Only requires curl and zip/unzip to be present on your system.***
+```bash
 ## CentOS ##
-$ yum install -y curl zip unzip
+yum install -y curl zip unzip
+
+## Debian/Ubuntu ##
+apt-get install curl zip unzip -y
 ```
 
 Simply open a new terminal and enter:
 ```bash
-$ curl -s "https://get.sdkman.io" | bash
+curl -s "https://get.sdkman.io" | bash
 ```
 
 Next, open a new terminal or enter:
 ```bash
-$ source "$HOME/.sdkman/bin/sdkman-init.sh"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
 
 Lastly, run the following code snippet to ensure that installation succeeded:
 ```bash
-$ sdk version
+sdk version
 ```
 
 ## [Usage](http://sdkman.io/usage.html)
